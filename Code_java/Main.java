@@ -8,7 +8,9 @@ public class Main {
         String textcal = input.nextLine() ;
         Calculator cal = new Calculator(textcal) ;
         cal.getresult() ;
-
+        Display.DisplayNumber(cal.getNumber());
+        Display.DisplayOperator(cal.getOperators());
+        System.out.println("= " + cal.getResultCAL());
         input.close() ;
     }
 }

@@ -15,6 +15,14 @@ public class Calculator {
         return resultCAL ; 
     }
 
+    public ArrayList<Double> getNumber() {
+        return numbers;
+    }
+
+    public ArrayList<Character> getOperators() {
+        return operators;
+    }
+
     public void getresult() {
         String text = this.textCalculate.replaceAll(" ", "") ;
         
@@ -79,11 +87,6 @@ public class Calculator {
             } else if (opera == '-' ) {
                 resultCAL -= nextNum ;
             }
-
         }
-        System.out.println("final result: " + getResultCAL() ) ;
-        System.out.println("Numbers: " + numbers) ;
-        System.out.println("Operators: " + operators) ;
-
     }
 }
