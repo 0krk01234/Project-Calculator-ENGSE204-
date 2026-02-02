@@ -41,6 +41,10 @@ public class Calculator {
         return operators;
     }
 
+    public String getText() {
+        return this.textCalculate.replaceAll(" ", "") ;
+    }
+
     public void getresult() {
         String text = this.textCalculate.replaceAll(" ", "") ;  
         String holderNum = "" ; 
