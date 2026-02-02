@@ -3,21 +3,21 @@ import java.util.Scanner ;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in) ;
-        Display.Interface() ;
         try {
-            System.out.print("Enter equation : ") ;
+            Display.InitNum();
             String textcal = input.nextLine() ;
             Calculator cal = new Calculator(textcal) ;
             cal.getresult() ;
             Display.DisplayNumber(cal.getNumber() ) ;
             Display.DisplayOperator(cal.getOperators() ) ;
-            System.out.println("Result of "+ cal.getText() + " = " + cal.getResultCAL() ) ;
+            Display.DisplayResult(cal.getText(), cal.getResultCAL());
+            Display.Interface(cal.getResultCAL());
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage() ) ;
         } catch (ArithmeticException e) {
             System.out.println(e.getMessage() ) ;
         } catch (Exception e) {
-            System.out.println("Error : Something went wrong") ;
+            Display.DisplayError();
         } finally {
             input.close() ;
         }
