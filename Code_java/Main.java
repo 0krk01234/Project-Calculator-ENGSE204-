@@ -8,6 +8,9 @@ public class Main {
             String textcal = input.nextLine() ;
             Calculator cal = new Calculator(textcal) ;
             cal.getresult() ;
+            Display.DisplayNumber(cal.getNumber() ) ;
+            Display.DisplayOperator(cal.getOperators() ) ;
+            System.out.println("= " + cal.getResultCAL() ) ;
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage() ) ;
         } catch (ArithmeticException e) {
@@ -17,6 +20,5 @@ public class Main {
         } finally {
             input.close() ;
         }
-
     }
 }

@@ -1,4 +1,5 @@
 package Code_java;
+import java.util.ArrayList;
 
 public class Display {
     public static void Interface() {
@@ -18,16 +19,12 @@ public class Display {
         System.out.println("|_____________________|");
     }
 
-    public static void InitNum() {
-        System.out.print("Enter initial number : ");
+    public static void DisplayNumber(ArrayList<Double> num) {
+        System.out.println("Numbers: " + num);
     }
 
-    public static void nextNum() {
-        System.out.print("Enter next number : ");
-    }
-
-    public static void OperatorList() {
-        System.out.print("Enter operator (+,-,*,/,%),type '=' to getresult and stop process : ") ;
+    public static void DisplayOperator(ArrayList<Character> op) {
+        System.out.println("Operators: " + op) ;
     }
 
 }
