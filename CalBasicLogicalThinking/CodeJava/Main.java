@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[ ] args) {
         Scanner input = new Scanner(System.in);
         
-        Display.Interface() ;
 
         Display.InitNum() ;
         double initNum = input.nextDouble() ;
@@ -17,19 +16,20 @@ public class Main {
         //----------loop-------------
         while (check) {
 
-            Display.OperatorList() ;
+            Display.displayOperatorList() ;
             String op_val = input.nextLine() ;
             
             if (op_val.contains("=")) break ; //chek if "="  exit loop
             
-            Display.nextNum() ; //input new number
+            Display.DisplayNextNum() ; //input new number
             double nextNum = input.nextDouble() ;
             input.nextLine(); //clear buffer
             
             op.calculator(op_val, nextNum) ;
             
         }
-        System.out.println("Final result : " + op.Result()) ;
+
+        Display.Interface(op.Result());
         
         input.close();
     }
