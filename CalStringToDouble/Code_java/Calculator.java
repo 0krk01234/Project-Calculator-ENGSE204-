@@ -23,6 +23,9 @@ public class Calculator {
             } 
         }
         //code 
+        if(IsAlpha) {
+            System.out.println("dont use Alpabetic equantion");
+        }
     }
 
     public double getResultCAL () {
