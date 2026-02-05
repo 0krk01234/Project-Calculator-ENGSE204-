@@ -34,6 +34,9 @@ public class Display {
     }
 
     //code 
+    public static void DisplayNumber() {
+        System.out.println("Number: " + num);
+    }
 
     public static void DisplayOperator(ArrayList<Character> op) { //เเสดงตัวดำเนินการ
         System.out.println("Operators: " + op) ;
