@@ -23,6 +23,9 @@ public class Calculator {
             } 
         }
         //code 
+        if (IsAlpha) {
+            throw new IllegalArgumentException("Don't use alphabetic in equation.");
+        } 
     }
 
     public double getResultCAL () {
