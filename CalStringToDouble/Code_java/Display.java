@@ -34,7 +34,7 @@ public class Display {
     }
 
     //code 
-    public static void DisplayNumber() {
+    public static void DisplayNumber(ArrayList<Double> num) {
         System.out.println("Number: " + num);
     }
 
